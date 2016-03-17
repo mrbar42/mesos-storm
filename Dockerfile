@@ -19,7 +19,7 @@ ARG MIRROR=http://www.gtlib.gatech.edu/pub
 RUN apt-get update && \
     apt-get install curl -y && \
     curl -sL https://rpm.nodesource.com/setup_4.x | bash - && \
-    yum install -y python nodejs gcc-c++ make && \
+    apt-get install -y python nodejs gcc-c++ make && \
     apt-get clean
 
 ADD . /work
