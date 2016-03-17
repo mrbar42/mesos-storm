@@ -18,7 +18,7 @@ ARG MIRROR=http://www.gtlib.gatech.edu/pub
 # install nodejs
 RUN apt-get update && \
     apt-get install curl -y && \
-    curl -sL https://rpm.nodesource.com/setup_4.x | bash - && \
+    curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash - && \
     apt-get install -y python nodejs gcc-c++ make && \
     apt-get clean
 
